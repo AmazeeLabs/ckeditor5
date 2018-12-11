@@ -41,6 +41,10 @@
     "@ckeditor/ckeditor5-undo": "ckeditor/ckeditor5-undo",
     "@ckeditor/ckeditor5-upload": "ckeditor/ckeditor5-upload",
     "@ckeditor/ckeditor5-utils": "ckeditor/ckeditor5-utils",
-    "@ckeditor/ckeditor5-widget": "ckeditor/ckeditor5-widget"
+    "@ckeditor/ckeditor5-widget": "ckeditor/ckeditor5-widget",
+    "@amazee/ckeditor5-template": "git@github.com:AmazeeLabs/ckeditor5-template.git",
+    "@amazee/ckeditor5-drupal-linkit": "git@github.com:AmazeeLabs/ckeditor5-drupal-linkit.git",
+    "@amazee/ckeditor5-drupal-media": "git@github.com:AmazeeLabs/ckeditor5-drupal-media.git",
+    "@amazee/ckeditor5-build-drupal-sections": "git@github.com:AmazeeLabs/ckeditor5-build-drupal-sections.git"
   }
 }
