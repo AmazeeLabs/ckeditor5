@@ -189,10 +189,11 @@ First, install the necessary dependencies:
 
 ```bash
 npm install --save \
+    @ckeditor/ckeditor5-vue \
     @ckeditor/ckeditor5-dev-webpack-plugin \
     @ckeditor/ckeditor5-dev-utils \
     postcss-loader \
-    raw-loader
+    raw-loader@0.5.1
 ```
 
 Edit the `vue.config.js` file and use the following configuration. If the file is not present, create it in the root of the application (i.e. next to `package.json`):
@@ -235,10 +236,30 @@ module.exports = {
 	chainWebpack: config => {
 		// Vue CLI would normally use its own loader to load .svg files. The icons used by
 		// CKEditor should be loaded using raw-loader instead.
+
+		// Get the default rule for *.svg files.
+		const svgRule = config.module.rule( 'svg' );
+
+		// Then you can either:
+		//
+		// * clear all loaders for existing 'svg' rule:
+		//
+		//		svgRule.uses.clear();
+		//
+		// * or exclude ckeditor directory from node_modules:
+		svgRule.exclude.add( __dirname + '/node_modules/@ckeditor' );
+
+		// Add an entry for *.svg files belonging to CKEditor. You can either:
+		//
+		// * modify the existing 'svg' rule:
+		//
+		//		svgRule.use( 'raw-loader' ).loader( 'raw-loader' );
+		//
+		// * or add a new one:
 		config.module
-			.rule( 'svg' )
+			.rule( 'cke-svg' )
 			.test( /ckeditor5-[^/\\]+[/\\]theme[/\\]icons[/\\][^/\\]+\.svg$/ )
-			.use( 'file-loader' )
+			.use( 'raw-loader' )
 			.loader( 'raw-loader' );
 	}
 };
@@ -316,6 +337,44 @@ Now all you need to do is specify the list of rich text editor options (**includ
 			};
 		}
 	};
+</script>
+```
+
+## Using the Document editor build
+
+If you use the {@link framework/guides/document-editor Document editor} in your application, you need to {@link module:editor-decoupled/decouplededitor~DecoupledEditor.create manually add the editor toolbar to the DOM}.
+
+Since accessing the editor toolbar is not possible until after the editor instance is {@link module:core/editor/editor~Editor#event:ready ready}, put your toolbar insertion code in a method executed upon the [`ready`](#ready) event of the component, like in the following example:
+
+```html
+<template>
+		<div id="app">
+			<ckeditor :editor="editor" @ready="onReady" ... ></ckeditor>
+		</div>
+</template>
+
+<script>
+	import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
+
+	export default {
+		name: 'app',
+		data() {
+			return {
+				editor: DecoupledEditor,
+
+				// ...
+			};
+		},
+		methods: {
+			onReady( editor )  {
+				// Insert the toolbar before the editable area.
+				editor.ui.view.editable.element.parentElement.insertBefore(
+					editor.ui.view.toolbar.element,
+					editor.ui.view.editable.element
+				);
+			}
+		}
+	}
 </script>
 ```
 
