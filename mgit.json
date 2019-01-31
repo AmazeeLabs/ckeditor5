@@ -43,8 +43,8 @@
     "@ckeditor/ckeditor5-utils": "ckeditor/ckeditor5-utils#900b54b",
     "@ckeditor/ckeditor5-widget": "ckeditor/ckeditor5-widget#585b5df",
     "@amazee/ckeditor5-template": "git@github.com:AmazeeLabs/ckeditor5-template.git#a259298",
-    "@amazee/ckeditor5-drupal-linkit": "git@github.com:AmazeeLabs/ckeditor5-drupal-linkit.git#2d7cf03",
-    "@amazee/ckeditor5-drupal-media": "git@github.com:AmazeeLabs/ckeditor5-drupal-media.git#a524a61",
-    "@amazee/ckeditor5-build-drupal-sections": "git@github.com:AmazeeLabs/ckeditor5-build-drupal-sections.git#cbbb95b"
+    "@amazee/ckeditor5-drupal-linkit": "git@github.com:AmazeeLabs/ckeditor5-drupal-linkit.git#b7ac9ba",
+    "@amazee/ckeditor5-drupal-media": "git@github.com:AmazeeLabs/ckeditor5-drupal-media.git#014c732",
+    "@amazee/ckeditor5-build-drupal-sections": "git@github.com:AmazeeLabs/ckeditor5-build-drupal-sections.git#2b7f6e2"
   }
 }
