@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -16,10 +16,10 @@
 //
 // Note: This task based on versions published on NPM and GitHub. If something went wrong, you can call this script one more time.
 //
-// This task should be executed after: `npm run release:bump-version`.
+// This task should be executed after: `yarn run release:bump-version`.
 //
 // Use:
-// npm run release:publish -- --dry-run
+// yarn run release:publish --dry-run
 
 /* eslint-disable max-len */
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -10,7 +10,7 @@
 'use strict';
 
 // In order to use the same version for all packages (including builds and ckeditor5 itself), you can call:
-// npm run changelog [newVersion]
+// yarn run changelog [newVersion]
 
 const devEnv = require( '@ckeditor/ckeditor5-dev-env' );
 const commonOptions = {

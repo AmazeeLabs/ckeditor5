@@ -10,19 +10,9 @@ order: 30
 
 CKEditor 5 consists of {@link builds/guides/overview ready-to-use editor builds} and {@link framework/guides/overview CKEditor 5 Framework} upon which the builds are based.
 
-The easiest way to use CKEditor 5 in your React application is by choosing one of the {@link builds/guides/overview#available-builds rich text editor builds}. Additionally, it is also possible to integrate [CKEditor 5 built from source](#integrating-ckeditor-5-from-source) into your application.
+The easiest way to use CKEditor 5 in your React application is by choosing one of the {@link builds/guides/overview#available-builds rich text editor builds}. Additionally, it is also possible to integrate [CKEditor 5 built from source](#integrating-ckeditor-5-built-from-source) into your application.
 
 ## Quick start
-
-<info-box>
-	### Compatibility with `create-react-app@2`
-
-	The latest version of `create-react-app` (2.x) does not work with CKEditor 5 Builds due to a [bug (most likely in Babel)](https://github.com/facebook/create-react-app/issues/5387).
-
-	If you want to use CKEditor 5 with an application created via `create-react-app@2` you will need to [eject the configuration even in the development mode](https://github.com/facebook/create-react-app/issues/5387#issuecomment-429255695).
-
-	Until the above issue is resolved, in this guide we will use `create-react-app@1` which does not require ejecting the configuration when testing your application in the development mode. You will have to, however, eject it anyway to [build your app for production](#note-building-for-production).
-</info-box>
 
 Install the [CKEditor 5 WYSIWYG editor component for React](https://www.npmjs.com/package/@ckeditor/ckeditor5-react) and the build of your choice.
 
@@ -101,7 +91,7 @@ There are two main ways to do that.
 
 	In this approach you will include CKEditor 5 built from source &mdash; so you will choose the editor creator you want and the list of plugins, etc. It is more powerful and creates a tighter integration between your application and the WYSIWYG editor, however, it requires adjusting your `webpack.config.js` to CKEditor 5 needs.
 
-	Read more about this option in [Integrating CKEditor 5 from source](#integrating-ckeditor-5-from-source).
+	Read more about this option in [Integrating CKEditor 5 from source](#integrating-ckeditor-5-built-from-source).
 
 ### Note: Building for production
 
@@ -113,7 +103,7 @@ To do that, you need to first [eject the configuration](https://github.com/faceb
 npm run eject
 ```
 
-Then, you can customize `UglifyJsPlugin` options in the webpack configuration. Read how to do this [here](#changes-required-in-webpacks-production-config).
+Then, you can customize `UglifyJsPlugin` options in the webpack configuration. Read how to do this [here](#changes-required-in-webpacks-production-configuration).
 
 **Note**: The latest `webpack@4` comes with a version of `UglifyJsPlugin` which supports ES6 out of the box. Also, the React community works on allowing importing ES6 libraries into your applications, so this step will soon be no longer required.
 
@@ -134,9 +124,9 @@ class App extends Component {
                         console.log( 'Editor is ready to use!', editor );
 
                         // Insert the toolbar before the editable area.
-                        editor.ui.view.editable.element.parentElement.insertBefore(
+                        editor.ui.getEditableElement().parentElement.insertBefore(
                             editor.ui.view.toolbar.element,
-                            editor.ui.view.editable.element
+                            editor.ui.getEditableElement()
                         );
                     } }
                     onChange={ ( event, editor ) => console.log( { event, editor } ) }
@@ -160,7 +150,7 @@ This guide assumes that you are using [Create React App CLI](https://github.com/
 Install React CLI:
 
 ```bash
-npm install -g create-react-app@1
+npm install -g create-react-app
 ```
 
 Create your project using the CLI and go to the project's directory:

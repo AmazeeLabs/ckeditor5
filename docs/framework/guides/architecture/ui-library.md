@@ -162,7 +162,7 @@ new Template( {
 	attributes: {
 		class: [
 			'foo',
-			bind.to( 'className' )
+			bind.to( 'class' )
 		],
 		style: {
 			backgroundColor: 'yellow'
@@ -183,7 +183,7 @@ It renders to an HTML element:
 <p class="foo bar" style="background-color: yellow;">A paragraph.</p>
 ```
 
-where `observable#className` is `"bar"`. The `observable` in the example above can be a [view](#views) or any object which is {@link module:utils/observablemixin~Observable observable}. When the value of the `className` attribute changes, the template updates the `class` attribute in the DOM. From now on the element is permanently bound to the state of the application.
+where `observable#class` is `"bar"`. The `observable` in the example above can be a [view](#views) or any object which is {@link module:utils/observablemixin~Observable observable}. When the value of the `class` attribute changes, the template updates the `class` attribute in the DOM. From now on the element is permanently bound to the state of the application.
 
 Similarly, when rendered, the template also takes care of DOM events. A binding to the `click` event in the definition makes the `observable` always fire the `clicked` event upon an action in the DOM. This way the `observable` provides an event interface of the DOM element and all the communication should pass through it.
 
@@ -191,7 +191,7 @@ Similarly, when rendered, the template also takes care of DOM events. A binding 
 
 Views are organized into {@link module:ui/viewcollection~ViewCollection collections} which manage their elements and propagate DOM events even further. Adding or removing a view in a collection moves the {@link module:ui/view~View#element view's element} in the DOM to reflect the position.
 
-Each editor UI has a {@link module:core/editor/editorui~EditorUI#view root view}, which can be found under `editor.ui.view`. Such view usually defines the container element of the editor and undermost view collections that other features can populate.
+Each editor UI has a "root view" (e.g. {@link e.g. {@link module:editor-classic/classiceditorui~ClassicEditorUI#view `ClassicEditor#view`}), which can be found under `editor.ui.view`. Such view usually defines the container element of the editor and undermost view collections that other features can populate.
 
 For instance, the `BoxedEditorUiView` class defines two collections:
 * {@link module:ui/editorui/boxed/boxededitoruiview~BoxedEditorUIView#top} &ndash; A collection that hosts the toolbar.

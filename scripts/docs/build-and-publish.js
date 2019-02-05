@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -29,7 +29,7 @@ console.log( 'Updating your ckeditor5.github.io clone...' );
 exec( 'cd ../ckeditor5.github.io && git pull && cd -' );
 
 console.log( 'Building documentation...' );
-exec( 'npm run docs -- --production' );
+exec( 'yarn run docs --production' );
 
 console.log( 'Copying files...' );
 
