@@ -4,7 +4,7 @@
 
 "@amazee/editor-components@https://github.com/AmazeeLabs/editor-components.git":
   version "1.0.0"
-  resolved "https://github.com/AmazeeLabs/editor-components.git#6208278601a66e1369ebce9623ecc4b6f13f9a46"
+  resolved "https://github.com/AmazeeLabs/editor-components.git#a4bcbaaff2077614a83072f0d0e71badedb3134a"
   dependencies:
     lit-element "^2.0.0-rc.5"
     lit-html "^1.0.0"
