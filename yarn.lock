@@ -2,17 +2,6 @@
 # yarn lockfile v1
 
 
-"@amazee/ckeditor5-template@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@amazee/ckeditor5-template/-/ckeditor5-template-0.0.15.tgz#fc9f477d1c9137bbfa973373bdcac818a83de406"
-  integrity sha512-RTiGCGa6OOtTd56j9CTgingBQzMv4PCxEnpCiI1jAWsY0pa01GlYFeZqT/RhEAHPLG3Al4G06j8V2/7tuYUadw==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^11.1.0"
-    "@ckeditor/ckeditor5-engine" "^12.0.0"
-    "@ckeditor/ckeditor5-ui" "^11.2.0"
-    "@ckeditor/ckeditor5-utils" "^11.1.0"
-    "@ckeditor/ckeditor5-widget" "^10.3.1"
-
 "@amazee/editor-components@https://github.com/AmazeeLabs/editor-components.git":
   version "1.0.0"
   resolved "https://github.com/AmazeeLabs/editor-components.git#1db28eab07d4b903df97e68adbfd0af68a8a65f4"
