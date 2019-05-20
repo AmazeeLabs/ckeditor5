@@ -2,12 +2,10 @@
   "packages": "packages/",
   "packagesPrefix": "@ckeditor/ckeditor5-",
   "dependencies": {
-    "@ckeditor/ckeditor5-ui": "ckeditor/ckeditor5-ui#80562ef6646c8c69d63306bbc846bac8ab02f9f5",
-    "@ckeditor/ckeditor5-core": "ckeditor/ckeditor5-core#fc4ecc0df85c7262d6c0ff5133b265f40975f5aa",
-    "@ckeditor/ckeditor5-theme-lark": "ckeditor/ckeditor5-theme-lark#f766fb563576a1d3cbeb12cb55fd142e7a39e44b",
+    "@ckeditor/ckeditor5-ui": "ckeditor/ckeditor5-ui#5027653386fe34d67e31cbc7feffcb1e5bd6ff20",
+    "@ckeditor/ckeditor5-core": "ckeditor/ckeditor5-core#b808b59de8396b54675cc148e73cbfe7013d9346",
+    "@ckeditor/ckeditor5-theme-lark": "ckeditor/ckeditor5-theme-lark#5228861900898efac12e5aa8546fb8d2719a5d1d",
     "@amazee/ckeditor5-template": "git@github.com:AmazeeLabs/ckeditor5-template.git",
-    "@amazee/ckeditor5-drupal-linkit": "git@github.com:AmazeeLabs/ckeditor5-drupal-linkit.git",
-    "@amazee/ckeditor5-drupal-media": "git@github.com:AmazeeLabs/ckeditor5-drupal-media.git",
     "@amazee/ckeditor5-build-drupal-sections": "git@github.com:AmazeeLabs/ckeditor5-build-drupal-sections.git"
   }
 }
